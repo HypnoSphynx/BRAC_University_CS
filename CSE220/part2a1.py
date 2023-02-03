@@ -9,7 +9,7 @@ def sample_standard(source):
     standard_sum=0
     for i in source:
         standard_sum+=(i-mean(source))**2
-    return math.sqrt(standard_sum/(len(source)-1))
+    return (standard_sum/(len(source)-1))**0.5
 
 
 def away(source,score):
