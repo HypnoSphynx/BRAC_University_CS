@@ -6,15 +6,12 @@ def bunch(source):
     while count<len(source)-1:
         if source[count]==source[count+1]:
             bunch+=1
-        else:
             if max_bunch<bunch:
                 max_bunch=bunch
+        else:
             bunch=1
         count+=1   
     return max_bunch
 
 
-
-
-
-print(bunch([1,1,2, 2,2,2,2, 1, 1,1,1]))
+print(bunch([1, 2, 2, 3, 4, 4, 4,2,2,2,2,2,2,4,3,2,3]))

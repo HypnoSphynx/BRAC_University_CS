@@ -1,5 +1,4 @@
 #method-1
-import time
 def remove(source,idx):
     for i in range(idx,len(source)):
         if i==len(source)-1: #condition for setting last element as 0
@@ -12,7 +11,7 @@ def remove(source,idx):
 def shiftLeft(source,k):
     for i in range(k,len(source)-1): #made a little change in shiftLeft, it will start the loop from the given index and will start shifiting left from that
         source[i]=source[i+1]
-        source[i+1]=None
+        source[i+1]=0
     return source
 
 def remove(source,idx):
@@ -21,7 +20,16 @@ def remove(source,idx):
     return source
         
 
+
+#method3
+def remove(source,k):
+    for i in range(k,len(source)-1):
+        source[i]=source[i+1]
+        source[i+1]=0
+    return source
+
+
+
 source=[10,20,30,40,50,0,0]
 remove(source,2)
 print(source)
-
