@@ -1,10 +1,9 @@
 def shiftLeft(source,k):
+    for i in range(k):
+        for i in range(len(source)-1):
+            source[i]=source[i+1]
+            source[i+1]=None
+    return source
 
-    new_array=[0]*len(source)
-
-    for i in range(0,len(source)-k): 
-        new_array[i]=source[k]
-        k+=1  
-    print(new_array)
 source=[10,20,30,40,50,60]
-shiftLeft(source,3)
+print(shiftLeft([10,20,30,40,50,60],3))

@@ -1,12 +1,15 @@
-def shiftLeft(source,k):
+def shiftRight(source,k): 
+    for i in range(k):
+        for i in range(len(source)-1,0,-1):
+            source[i]=source[i-1]
+        source[0]=None
+    return source
 
-    new_array=[0]*len(source)
-
-    for i in range(k): 
-        new_array[i]=source[k]
-        new_array[k]=source[i]
-        k+=1  
-    print(new_array)
-
+def rotateRight(source,k):
+    for i in range(k):
+        temp=source[len(source)-1]
+        source=shiftRight(source,1)
+        source[0]=temp
+    return source
 source=[10,20,30,40,50,60]
-shiftLeft(source,3)
+print(rotateRight(source,3))
