@@ -11,5 +11,5 @@ def rotateRight(source,k):
         source=shiftRight(source,1)
         source[0]=temp
     return source
-source=[10,20,30,40,50,60]
+source=[5,10,45,6]
 print(rotateRight(source,3))
