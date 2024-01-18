@@ -9,12 +9,12 @@ class key_index:
             else:
                 if i < self.min:
                     self.min=i
-        length=max+(-self.min)
-        self.aux_array=[0]*(length+1)
+        length=int(max+(-self.min))
+        self.aux_array=[0]*((length)+1)
         print(self.min)
 
         for i in array:
-            self.aux_array[i+(-self.min)]+=1
+            self.aux_array[int(i+(-self.min))]+=1
         print(self.aux_array)
 
     def searching(self,val):
@@ -43,6 +43,6 @@ class key_index:
                     size+=1
         print(new)
         
-a=key_index([-5,4,1,3,4])
-print(a.searching(2))
+a=key_index([2, 5, 1.2, 6.7, 1.7, 9.3, 2.2, 7.7, 0, -4, -5.1, 2, 5, 5.2])
+print(a.searching(5))
 a.sorted_array()

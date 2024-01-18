@@ -1,0 +1,8 @@
+file=open('input2.txt','r')
+output=open('output2.1.txt','w')
+size1=int(file.readline())
+array=list(map(int,file.readline().split(' ')))
+size2=int(file.readline())
+array=array+list(map(int,file.readline().split(' ')))
+array.sort()
+for i in array: output.write(f'{str(i)} ' )
