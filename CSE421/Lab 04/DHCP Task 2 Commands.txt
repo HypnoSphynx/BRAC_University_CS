@@ -1,0 +1,19 @@
+DHCP Configuration:
+
+Service: On
+Port Name: R1_LAN
+Default Gateway: 192.168..50.1
+DNS Server: 192.168.60.254
+Start IP Address: 192.168.50.11
+Subnet Mask: 255.255.255.0
+
+
+
+R1>en
+R1#coft
+R1#conf t
+R1(config)#int g0/0
+R1(config-if)#ip helper-address 192.168.60.253
+R1(config-if)#
+
+PC1 IP Configuration: DHCP

@@ -1,0 +1,13 @@
+PC-A:
+
+tracert 192.0.0.10
+
+
+
+Edge_Router CLI:
+en
+conf t
+ip route 0.0.0.0 0.0.0.0 se0/0/0
+ip route 0.0.0.0 0.0.0.0 se0/0/1 5
+ipv6 unicast-routing
+ipv6 route ::/0 2001:DB8:A:2::1 5
